@@ -1,0 +1,19 @@
+<!-- <mat-selection-list [multiple]="false">
+    <mat-list-option [routerLink]="['/search']" routerLinkActive="mat-list-option-active" >
+        Search
+    </mat-list-option>
+
+    <mat-list-option>
+        Add
+    </mat-list-option>
+
+    <mat-list-option>
+        Setting
+    </mat-list-option>
+</mat-selection-list> -->
+
+<mat-list role="list">
+    <mat-list-item mat-ripple [routerLink]="['/dictionary']" routerLinkActive="mat-list-item-active"  role="listitem">Dictionary</mat-list-item>
+    <mat-list-item mat-ripple [routerLink]="['/books']" routerLinkActive="mat-list-item-active" role="listitem">Books</mat-list-item>
+    <mat-list-item mat-ripple role="listitem">Setting</mat-list-item>
+</mat-list>

@@ -1,0 +1,35 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span routerLink="/" style="outline: none;cursor: pointer">My Dictionary</span>
+  </mat-toolbar>
+
+<!-- <mat-grid-list cols="5" rowHeight="100%">
+
+    <mat-grid-tile
+    [colspan]="1"
+    [style.background]="'lightblue'"
+    >
+    <app-menu></app-menu>
+    </mat-grid-tile>
+
+    <mat-grid-tile
+    [colspan]="4"
+    [style.background]="'lightgreen'"
+    >
+    <app-books></app-books>
+    </mat-grid-tile>
+
+
+</mat-grid-list> -->
+
+<mat-drawer-container class="example-container" [style.height]="'90%'" >
+    <mat-drawer mode="side" #drawer opened [opened]="this.screenWidth > 615" style="width: 250px;">
+      <app-menu></app-menu>
+    </mat-drawer>
+
+    <mat-drawer-content [style.backgroundColor]="'white'">
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

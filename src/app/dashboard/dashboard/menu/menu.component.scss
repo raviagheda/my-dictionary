@@ -1,0 +1,14 @@
+.mat-list-item{
+    border-radius: 0px 50px 50px 0;
+    cursor: pointer;
+    outline: none;
+}
+.mat-list-item-active{
+    color: #1a73e8;
+    background-color: #e8f0fe;
+    // border-radius: 0px 50px 50px 0px;
+}
+
+.mat-list-item:hover{
+    background-color: #e8f0fe;
+}

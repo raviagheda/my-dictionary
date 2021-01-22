@@ -1,0 +1,33 @@
+<div class="m-2">
+  <div *ngFor="let item of meaning; let i = index">
+    <h1><b> 
+      <div>
+        {{ item?.word }} 
+        <button *ngIf="item?.phonetics.length > 0" mat-icon-button (click)="this.playAudio(item?.phonetics[0]?.audio)">
+        <mat-icon *ngIf="item?.phonetics">
+          volume_up
+        </mat-icon>
+      </button>
+      </div> </b>   </h1>
+    <ul>
+      <h2>Meaning</h2>
+      <li *ngFor="let meanings of item?.meanings">
+        <b> part of speech </b> : {{ meanings?.partOfSpeech }}
+        <ul>
+          Definition
+          <li *ngFor="let definition of meanings?.definitions">
+            <strong> {{ definition?.definition }} </strong>
+            <br>
+            <i>~ {{definition?.example}} </i>
+            <div *ngIf="definition?.synonyms">
+              Synonyms -
+              <span *ngFor="let s of definition?.synonyms">{{s}}, </span>
+
+            </div>
+          </li>
+        </ul>
+        <br>
+      </li>
+    </ul>
+  </div>
+</div>
