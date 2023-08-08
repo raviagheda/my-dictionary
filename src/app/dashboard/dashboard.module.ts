@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { BooksComponent } from './dashboard/books/books.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { MaterialModule } from '../material.module';
 import { MenuComponent } from './dashboard/menu/menu.component';
@@ -16,7 +15,7 @@ import { MeaningComponent } from './dashboard/dictionary/meaning/meaning.compone
 
 
 @NgModule({
-  declarations: [DashboardComponent, BooksComponent, MenuComponent, DictionaryComponent, MeaningComponent],
+  declarations: [DashboardComponent, MenuComponent, DictionaryComponent, MeaningComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
